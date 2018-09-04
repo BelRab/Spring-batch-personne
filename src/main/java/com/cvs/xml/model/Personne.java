@@ -1,6 +1,6 @@
 package com.cvs.xml.model;
 
-import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="personne")
@@ -22,7 +22,7 @@ public class Personne {
 	/**
 	 * @return the id
 	 */
-	@XmlAttribute(name="id")
+	@XmlElement(name="id")
 	public String getId() {
 		return id;
 	}
@@ -37,7 +37,7 @@ public class Personne {
 	/**
 	 * @return the name
 	 */
-	@XmlAttribute(name="name")
+	@XmlElement(name="name")
 	public String getName() {
 		return name;
 	}
@@ -52,7 +52,7 @@ public class Personne {
 	/**
 	 * @return the ville
 	 */
-	@XmlAttribute(name="ville")
+	@XmlElement(name="ville")
 	public String getVille() {
 		return ville;
 	}

@@ -15,8 +15,8 @@ public class CustomFieldsetMapper implements FieldSetMapper<Personne>{
 
 		// lire les colonnes
 		personne.setId(fieldSet.readString(0));	
-		personne.setId(fieldSet.readString(1));
-		personne.setId(fieldSet.readString(2));
+		personne.setName(fieldSet.readString(1));
+		personne.setVille(fieldSet.readString(2));
 		
 		return personne;
 	}

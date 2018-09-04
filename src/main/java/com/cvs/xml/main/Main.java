@@ -15,7 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 	public static void main(String[] args) throws Exception{
 
-		String[] springConfig = {"personne.xml"}; // je suis sure qu'elle soit juste
+		String[] springConfig = {"job-configuration.xml"}; 
 		
 		//créer une application context
 		ApplicationContext context = new ClassPathXmlApplicationContext(springConfig);
@@ -24,7 +24,7 @@ public class Main {
 		JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
 		
 		// créer le job
-		Job job = (Job) context.getBean("personne");
+		Job job = (Job) context.getBean("job1");
 		
 		//Execution de job
 		JobExecution execution = (JobExecution) jobLauncher.run(job, new JobParameters()); // erreur ici
